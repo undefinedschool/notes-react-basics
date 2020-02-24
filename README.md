@@ -50,6 +50,8 @@ constructor() {
 }
 ```
 
+El _state_ se va a utilizar entonces para _interactividad_, es decir, datos que cambian a través del tiempo.
+
 > 👉 Recordermos que **la vista es una función del estado**: cuando el estado cambia, la vista se vuelve a renderizar. Por lo tanto, si queremos que la vista (UI) sea actualice, tenemos que modificar el estado de alguna forma.
 
 ## Props vs State
@@ -72,11 +74,13 @@ Entre las diferencias, encontramos
 **State:**
 
 - se _administra_ dentro de un componente, similar a como funcionan las variables declaradas dentro de una función.
-- un componente maneja su propio estado internamente, pero no modifica el estado de sus _child components_. Podríamos decir que el _state_ es _privado_.
+- un componente maneja su propio estado internamente, pero no modifica el estado de sus _child components_. Podríamos decir que el _state_ es _privado_ y el componente mismo se encarga de inicializarlo y modificarlo.
 - siempre debe tener un valor inicial (default).
 - es _mutable_, pero sólo puede modificarse por el componente que lo contiene (a través de `setState`).
 
-> 👉 Como recomendación, es conveniente en lo posible trabajar con **componentes [_stateless_](https://github.com/undefinedschool/notes-react-basics#functional-o-stateless-components)s** ya que manejar el _state_ agrega complejidad.
+**Es conveniente, en lo posible trabajar con componentes [_stateless_](https://github.com/undefinedschool/notes-react-basics#functional-o-stateless-components)s**, ya que manejar el _state_ agrega complejidad a nuestra aplicación.
+
+> 👉 Ver más detalles en [_ReactJS: Props vs. State_](https://lucybain.com/blog/2016/react-state-vs-pros/).
 
 ### Debe un componente tener estado?
 
@@ -196,7 +200,7 @@ La forma que tenemos de modificar el [_state_](https://github.com/undefinedschoo
 
 Volviendo al ejemplo anterior, si queremos, por ejemplo, modificar alguna propiedad del _state_ al hacer click en un botón, podríamos utilizar la propiedad `onClick`, que agrega un _listener_ (para un evento de tipo 'click') en el elemento `<button>` y recibe un [_callback_](https://github.com/undefinedschool/notes-callbacks) como parámetro. Este callback va a ejecutarse cada vez que se clickee el botón.
 
-Combinando lo anterior entonces con el método `setState`<sup>2</sup>, podemos modificar el estado al clickear el botón.
+Combinando lo anterior entonces con el método `setState`<sup>2</sup>, podemos modificar el estado al clickear el botón. `setState` va a invocar luego a `render` (ya que modificamos el estado), para que el componente sea renderizado nuevamente y la UI refleje correctamente el cambio de estado.
 
 En este caso, sólo estamos modificando la propiedad `jsFirst` del _state_ y dejando el resto igual que antes.
 
