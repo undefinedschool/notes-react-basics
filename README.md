@@ -44,9 +44,11 @@ Por ejemplo
 
 donde `mdnLink` y `jsFirst` son strings que recibimos como [_props_](https://github.com/undefinedschool/notes-react-basics#props) ó a través del [_state_](https://github.com/undefinedschool/notes-react-basics#state).
 
-## Function o _Stateless Components_
+## Tipos de componentes
 
-## Class o _Stateful Components_
+### Function o _Stateless Components_
+
+### Class o _Stateful Components_
 
 Podemos escribir [clases](https://github.com/undefinedschool/notes-oop-js/blob/master/README.md#class) que _retornen HTML_.
 
@@ -114,6 +116,42 @@ class App extends Component {
     );
   }
 }
+```
+
+### Modificando el _state_
+
+La forma que tenemos de modificar el [_state_](https://github.com/undefinedschool/notes-react-basics#state) en un [_Class Component_](https://github.com/undefinedschool/notes-react-basics/#class-o-stateful-components) es a través del método `setState` (que proviene de `Component`).
+
+Volviendo al ejemplo anterior, si queremos, por ejemplo, modificar alguna propiedad del _state_ al hacer click en un botón, podríamos utilizar la propiedad `onClick`, que agrega un _listener_ (para un evento de tipo 'click') en el elemento `<button>` y recibe un [_callback_](https://github.com/undefinedschool/notes-callbacks) como parámetro. Este callback va a ejecutarse cada vez que se clickee el botón.
+
+Combinando lo anterior entonces con el método `setState`, podemos modificar el estado al clickear el botón.
+
+En este caso, sólo estamos modificando la propiedad `jsFirst` del _state_ y dejando el resto igual que antes.
+
+```JSX
+return (
+  <div className='App'>
+    <header className='App-header'>
+      <img src={logo} className='App-logo' alt='logo' />
+      <p>
+        Edit <code>src/App.js</code> and save to reload.
+      </p>
+      <a className='App-link' href={mdnLink} target='_blank' rel='noopener noreferrer'>
+        Learn {jsFirst}
+      </a>
+      <button
+        onClick={() =>
+          this.setState({
+            ...this.state,
+            jsFirst: 'React'
+          })
+        }
+      >
+        Change text
+      </button>
+    </header>
+  </div>
+);
 ```
 
 ---
