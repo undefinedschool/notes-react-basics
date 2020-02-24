@@ -28,7 +28,7 @@ Los [componentes](https://github.com/undefinedschool/notes-react-basics#react-co
 
 ## State
 
-El _state_ o estado de una aplicación, es un objeto de JavaScript que representa las características propias de un [componente](https://github.com/undefinedschool/notes-react-basics#react-component)
+El _state_ o estado de una aplicación, es un objeto de JavaScript que representa las características propias de un [componente](https://github.com/undefinedschool/notes-react-basics#react-component).
 
 ## JSX
 
@@ -42,7 +42,7 @@ Por ejemplo
 </a>
 ```
 
-donde `mdnLink` y `jsFirst` son strings que recibimos como [_props_](https://github.com/undefinedschool/notes-react-basics#props) ó a través del [_state_](https://github.com/undefinedschool/notes-react-basics#state)
+donde `mdnLink` y `jsFirst` son strings que recibimos como [_props_](https://github.com/undefinedschool/notes-react-basics#props) ó a través del [_state_](https://github.com/undefinedschool/notes-react-basics#state).
 
 ## Function o _Stateless Components_
 
@@ -50,15 +50,15 @@ donde `mdnLink` y `jsFirst` son strings que recibimos como [_props_](https://git
 
 Podemos escribir [clases](https://github.com/undefinedschool/notes-oop-js/blob/master/README.md#class) que _retornen HTML_.
 
-> 👉 Usamos _Class_ si necesitamos acceder al [_state_](https://github.com/undefinedschool/notes-react-basics#state) de la aplicación
+> 👉 Usamos _Class_ si necesitamos acceder al [_state_](https://github.com/undefinedschool/notes-react-basics#state) de la aplicación.
 
-Primero necesitamos importar `Component`
+Primero necesitamos importar `Component`,
 
 ```js
 import React, { Component } from 'react';
 ```
 
-el cual vamos a extender para escribir nuestras propias clases
+el cual vamos a extender para escribir nuestras propias clases.
 
 ```JSX
 class App extends Component {
@@ -118,4 +118,4 @@ class App extends Component {
 
 ---
 
-<sup>1</sup> Ver [_one-way data flow_](https://github.com/undefinedschool/notes-react-principles#flujo-de-datos-unidireccional-one-way-data-flow)
+<sup>1</sup> Ver [_one-way data flow_](https://github.com/undefinedschool/notes-react-principles#flujo-de-datos-unidireccional-one-way-data-flow).
