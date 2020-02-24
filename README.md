@@ -76,7 +76,7 @@ Entre las diferencias, encontramos
 - se _administra_ dentro de un componente, similar a como funcionan las variables declaradas dentro de una función.
 - un componente maneja su propio estado internamente, pero no modifica el estado de sus _child components_. Podríamos decir que el _state_ es _privado_ y el componente mismo se encarga de inicializarlo y modificarlo.
 - siempre debe tener un valor inicial (default).
-- es _mutable_, pero sólo puede modificarse por el componente que lo contiene (a través de `setState`).
+- es _mutable_, pero sólo puede modificarse por el componente que lo contiene, utilizando `setState`.
 
 **Es conveniente, en lo posible trabajar con componentes [_stateless_](https://github.com/undefinedschool/notes-react-basics#functional-o-stateless-components)s**, ya que manejar el _state_ agrega complejidad a nuestra aplicación.
 
@@ -100,7 +100,7 @@ Entre las diferencias, encontramos
 
 [JSX](https://facebook.github.io/jsx/) nos permite utilizar una sintaxis _similar a HTML_ en aplicaciones React, que pueda convivir con código JavaScript en un mismo archivo `.js`. [Babel](https://babeljs.io/) luego va a transformar (_transpilar_) este código y transformarlo en código JavaScript standard que el _engine_ (por ejemplo del browser) puede entender y ejecutar. Por lo tanto, _JSX nos permite escribir HTML dentro de JavaScript_.
 
-Podemos escribir cualquier expresión válida en JS dentro de llaves `{}` y esta será evaluada.
+> 👉 **Podemos escribir cualquier expresión válida en JS dentro de llaves (`{}`) y esta será evaluada**.
 
 Por ejemplo
 
@@ -200,7 +200,9 @@ La forma que tenemos de modificar el [_state_](https://github.com/undefinedschoo
 
 Volviendo al ejemplo anterior, si queremos, por ejemplo, modificar alguna propiedad del _state_ al hacer click en un botón, podríamos utilizar la propiedad `onClick`, que agrega un _listener_ (para un evento de tipo 'click') en el elemento `<button>` y recibe un [_callback_](https://github.com/undefinedschool/notes-callbacks) como parámetro. Este callback va a ejecutarse cada vez que se clickee el botón.
 
-Combinando lo anterior entonces con el método `setState`<sup>2</sup>, podemos modificar el estado al clickear el botón. `setState` va a invocar luego a `render` (ya que modificamos el estado), para que el componente sea renderizado nuevamente y la UI refleje correctamente el cambio de estado.
+Combinando lo anterior entonces con el método `setState`<sup>2</sup>, podemos modificar el estado al clickear el botón. `setState` va a invocar luego al método `render` (ya que modificamos el estado), para que el componente se vuelva a renderizar y la UI refleje el cambio de estado correctamente.
+
+> 👉 **Es importante notar que sólo modificamos el _state_ a través de `setState`** y no hacemos, por ejemplo `this.state.jsFirst = ...`. `setState` modifica el estado y luego llama a `render`, para que los cambios se produzcan siempre de forma _unidireccional_.
 
 En este caso, sólo estamos modificando la propiedad `jsFirst` del _state_ y dejando el resto igual que antes.
 
@@ -234,4 +236,4 @@ return (
 
 <sup>1</sup> Ver [_one-way data flow_](https://github.com/undefinedschool/notes-react-principles#flujo-de-datos-unidireccional-one-way-data-flow).
 
-<sup>2</sup> Tener en cuenta que [`setState` es _asincrónico_](https://medium.com/@wereHamster/beware-react-setstate-is-asynchronous-ce87ef1a9cf3)
+<sup>2</sup> Tener en cuenta que [`setState` es _asincrónico_](https://medium.com/@wereHamster/beware-react-setstate-is-asynchronous-ce87ef1a9cf3).
