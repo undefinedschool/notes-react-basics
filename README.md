@@ -13,11 +13,12 @@
 ## Contenido
 
 - [React Component](https://github.com/undefinedschool/notes-react-basics#react-component)
-- [Props](https://github.com/undefinedschool/notes-react-basics#props)
-- [State](https://github.com/undefinedschool/notes-react-basics#state)
-- [Props vs State](https://github.com/undefinedschool/notes-react-basics#props-vs-state)
+  - [Props](https://github.com/undefinedschool/notes-react-basics#props)
+  - [State](https://github.com/undefinedschool/notes-react-basics#state)
+  - [Props vs State](https://github.com/undefinedschool/notes-react-basics#props-vs-state)
   - [Debe un componente tener estado?](https://github.com/undefinedschool/notes-react-basics#debe-un-componente-tener-estado)
 - [JSX](https://github.com/undefinedschool/notes-react-basics#jsx)
+  - [Fragments](https://github.com/undefinedschool/notes-react-basics#fragments)
 - [Tipos de componentes](https://github.com/undefinedschool/notes-react-basics#tipos-de-componentes)
   - [Functional o Stateless Components](https://github.com/undefinedschool/notes-react-basics#functional-o-stateless-components)
   - [Class o Stateful Components](https://github.com/undefinedschool/notes-react-basics#class-o-stateful-components)
@@ -34,9 +35,9 @@ En React, cada parte de la UI es un componente y cada componente tiene un [estad
 
 Idealmente, [cada componente debería encargarse de una sola cosa](https://en.wikipedia.org/wiki/Single_responsibility_principle). Si crece demasiado, puede a su vez dividirse en _sub-componentes_. Es decir, aplicamos el mismo criterio que utilizamos a la hora de crear funciones u objetos en general.
 
-> 👉 **La UI de nuestra aplicación va a terminar estando definida entonces como un [_árbol de componentes_](https://reactjs.org/docs/thinking-in-react.html#step-1-break-the-ui-into-a-component-hierarchy)**
+> 👉 **La UI de nuestra aplicación va a terminar estando definida entonces como un [_árbol de componentes_](https://reactjs.org/docs/thinking-in-react.html#step-1-break-the-ui-into-a-component-hierarchy)**.
 
-## Props
+### Props
 
 Los [componentes](https://github.com/undefinedschool/notes-react-basics#react-component) reciben valores a través de diferentes parámetros a los que llamamos _props_ (por propiedades) y retornan el código necesario (usando [_JSX_](https://github.com/undefinedschool/notes-react-basics#jsx)) para renderizar los componentes. 
 
@@ -44,7 +45,7 @@ Podríamos decir que funcionan de forma similar a los _atributos HTML_, sólo qu
 
 > 👉 **Las _props_ son inmutables y siempre se pasan de componentes superiores a componentes inferiores<sup>1</sup>**, dicho de otra forma, desde un componente padre (_parent component_) hacia un componente hijo (_child component_).
 
-## State
+### State
 
 Un [componentes](https://github.com/undefinedschool/notes-react-basics#react-component) puede simplemente recibir [_props_](https://github.com/undefinedschool/notes-react-basics#props) y renderizarse. 
 
@@ -66,7 +67,7 @@ El _state_ se va a utilizar entonces para _interactividad_, es decir, datos que 
 
 > 👉 Recordermos que **la vista es una función del estado**: cuando el estado cambia, la vista se vuelve a renderizar. Por lo tanto, si queremos que la vista (UI) sea actualice, tenemos que modificar el estado de alguna forma.
 
-## Props vs State
+### Props vs State
 
 Tanto las _props_ como el _state_ tienen características comunes:
 
@@ -121,8 +122,39 @@ donde `mdnLink` y `jsFirst` son strings que recibimos como [_props_](https://git
 - JSX no es un _template_ sino una extensión de la sintaxis de JS.
 - JSX existe de forma separada de React.
 - `<foo-bar />` mientras que `<foo-bar>` no. **A diferencia de HTML, en JSX tenemos que cerrar los tags siempre**.
+- para los _atributos de clase_, usamos `className` en lugar de `class`, ya que `class` es una _keyword_ de JS que usamos para construir _clases_ (OOP).
 
 > 👉 Para más detalles, ver [_JSX in Depth_](https://reactjs.org/docs/jsx-in-depth.html).
+
+### Fragments
+
+Si necesitamos devolver múltiples elementos, sin agregar innecesariamente nodos extra al DOM (como un `div` que haga de _contenedor_), podemos utilizar [_React Fragments_](https://reactjs.org/docs/fragments.html) para agrupar y devolver una lista de nodos.
+
+```JSX
+render() {
+  return (
+    <React.Fragment>
+      <ChildA />
+      <ChildB />
+      <ChildC />
+    </React.Fragment>
+  );
+}
+```
+
+Alternativamente, podemos utilizar una sintaxis abreviada (`<></>`). Tener en cuenta que esta última no soporta _keys_ o atributos.
+
+```JSX
+render() {
+  return (
+    <>
+      <ChildA />
+      <ChildB />
+      <ChildC />
+    </>
+  );
+}
+```
 
 ## Tipos de componentes
 
