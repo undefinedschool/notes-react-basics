@@ -173,7 +173,7 @@ render() {
 }
 ```
 
-Si queremos utilizar comentarios entonces, debemos escribir comentarios de JS de la forma `/* */`, dentro de llaves `{ }`.
+Si queremos utilizar comentarios entonces, debemos escribir comentarios de JS de la forma `/* */`, dentro de llaves `{ }` (**los comentarios con `//` no funcionan, sólo `/* */`**).
 
 > ✅ esta es la forma correcta.
 
@@ -190,14 +190,36 @@ render() {
 También podemos escribir comentarios multi-línea, de la forma
 
 ```JSX
-{/* 
-  Multi
-  line
-  comment
-*/}
+render() {
+  return (
+    <div>
+      {/* 
+        Multi
+        line
+        comment
+      */}
+    </div>
+  );
+}
 ```
 
-> 👉 **Notar que los comentarios con `//` no funcionan, sólo `/* */`**.
+> 👉 **Notar que los comentarios deben siempre incluirse dentro de otro elemento. Si queremos escribirlos de forma separada, podemos utilizar [_Fragments_](https://github.com/undefinedschool/notes-react-basics#fragments)**.
+
+Ejemplo con comentario suelto, utilizando _Fragments_.
+
+```JSX
+render() {
+  return (
+    <>
+      {/* 
+        hi
+        there
+      */}
+      <p>Hello, React dev!</>
+    </>
+  );
+}
+```
 
 ## Tipos de componentes
 
