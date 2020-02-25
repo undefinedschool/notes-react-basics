@@ -19,6 +19,7 @@
   - [Debe un componente tener estado?](https://github.com/undefinedschool/notes-react-basics#debe-un-componente-tener-estado)
 - [JSX](https://github.com/undefinedschool/notes-react-basics#jsx)
   - [Fragments](https://github.com/undefinedschool/notes-react-basics#fragments)
+  - [Comentarios](https://github.com/undefinedschool/notes-react-basics#comentarios)
 - [Tipos de componentes](https://github.com/undefinedschool/notes-react-basics#tipos-de-componentes)
   - [Functional o Stateless Components](https://github.com/undefinedschool/notes-react-basics#functional-o-stateless-components)
   - [Class o Stateful Components](https://github.com/undefinedschool/notes-react-basics#class-o-stateful-components)
@@ -155,6 +156,48 @@ render() {
   );
 }
 ```
+
+### Comentarios
+
+No podemos utilizar comentarios de HTML directamente dentro de _JSX_, porque pueden interpretarse como nodos del DOM.
+
+> ❌ esto no funciona!
+
+```JSX
+render() {
+  return (
+    <div>
+      <!-- This doesn't work! -->
+    </div>
+  );
+}
+```
+
+Si queremos utilizar comentarios entonces, debemos escribir comentarios de JS de la forma `/* */`, dentro de llaves `{ }`.
+
+> ✅ esta es la forma correcta.
+
+```JSX
+render() {
+  return (
+    <div>
+      { /* This works! */}
+    </div>
+  );
+}
+```
+
+También podemos escribir comentarios multi-línea, de la forma
+
+```JSX
+{/* 
+  Multi
+  line
+  comment
+*/}
+```
+
+> 👉 **Notar que los comentarios con `//` no funcionan, sólo `/* */`**.
 
 ## Tipos de componentes
 
