@@ -12,6 +12,18 @@
 
 ## Contenido
 
+- [React Component](https://github.com/undefinedschool/notes-react-basics#react-component)
+- [Props](https://github.com/undefinedschool/notes-react-basics#props)
+- [State](https://github.com/undefinedschool/notes-react-basics#state)
+- [Props vs State](https://github.com/undefinedschool/notes-react-basics#props-vs-state)
+  - [Debe un componente tener estado?](https://github.com/undefinedschool/notes-react-basics#debe-un-componente-tener-estado)
+- [JSX](https://github.com/undefinedschool/notes-react-basics#jsx)
+- [Tipos de componentes](https://github.com/undefinedschool/notes-react-basics#tipos-de-componentes)
+  - [Functional o Stateless Components](https://github.com/undefinedschool/notes-react-basics#functional-o-stateless-components)
+  - [Class o Stateful Components](https://github.com/undefinedschool/notes-react-basics#class-o-stateful-components)
+    - [Accediendo al _state_](https://github.com/undefinedschool/notes-react-basics#accediendo-al-state)
+    - [Modificando el _state_](https://github.com/undefinedschool/notes-react-basics#modificando-el-state)
+
 ---
 
 ## React Component
@@ -78,7 +90,7 @@ Entre las diferencias, encontramos
 - siempre debe tener un valor inicial (default).
 - es _mutable_, pero sólo puede modificarse por el componente que lo contiene, utilizando `setState`.
 
-**Es conveniente, en lo posible trabajar con componentes [_stateless_](https://github.com/undefinedschool/notes-react-basics#functional-o-stateless-components)s**, ya que manejar el _state_ agrega complejidad a nuestra aplicación.
+**Es conveniente, en lo posible trabajar con componentes [_stateless_](https://github.com/undefinedschool/notes-react-basics#functional-o-stateless-components)**, ya que manejar el _state_ agrega complejidad a nuestra aplicación.
 
 > 👉 Ver más detalles en [_ReactJS: Props vs. State_](https://lucybain.com/blog/2016/react-state-vs-pros/).
 
@@ -87,14 +99,6 @@ Entre las diferencias, encontramos
 **El _state_ es totalmente opcional**. Dado que agregarlo agrega complejidad a la aplicación, es preferente utilizar, siempre que sea posible, [componentes sin estado](https://github.com/undefinedschool/notes-react-basics#functional-o-stateless-components).
 
 > 👉 Si un componente necesita hacer uso de cierta información que puede cambiar entre _renders_, información que el componente mismo puede crear y modificar, vamos a utilizar [_componentes con estado_](https://github.com/undefinedschool/notes-react-basics#class-o-stateful-components).
-
-**Algunos detalles a tener en cuenta:**
-
-- JSX no es un _template_ sino una extensión de la sintaxis de JS.
-- JSX existe de forma separada de React.
-- `<foo-bar />` mientras que `<foo-bar>` no. **A diferencia de HTML, en JSX tenemos que cerrar los tags siempre**.
-
-> 👉 Para más detalles, ver [_JSX in Depth_](https://reactjs.org/docs/jsx-in-depth.html).
 
 ## JSX
 
@@ -111,6 +115,14 @@ Por ejemplo
 ```
 
 donde `mdnLink` y `jsFirst` son strings que recibimos como [_props_](https://github.com/undefinedschool/notes-react-basics#props) ó a través del [_state_](https://github.com/undefinedschool/notes-react-basics#state).
+
+**Algunos detalles a tener en cuenta:**
+
+- JSX no es un _template_ sino una extensión de la sintaxis de JS.
+- JSX existe de forma separada de React.
+- `<foo-bar />` mientras que `<foo-bar>` no. **A diferencia de HTML, en JSX tenemos que cerrar los tags siempre**.
+
+> 👉 Para más detalles, ver [_JSX in Depth_](https://reactjs.org/docs/jsx-in-depth.html).
 
 ## Tipos de componentes
 
