@@ -380,7 +380,18 @@ Podemos agregar estilos con CSS a nuestro proyecto con simplemente linkear una h
 <link rel="stylesheet" href="styles.css" />
 ```
 
-El problema con aplicar estilos de esta forma, es que son **globales** (este es el comportamiento por default de CSS), por lo tanto no podríamos _scopear_ estilos a un componente determinado, sino que tendríamos un _namespace global_, complejizando así la reusabilidad de los estilos.
+También podemos importar el `.css` en el `index.js`. En el caso de que estemos utilizando [CRA](https://github.com/facebook/create-react-app), Webpack se dará cuenta de que `'./index.css'` es un archivo CSS y va a aplicarlo al componente `App`, a través de un atributo `style`.
+
+```JSX
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css'; // importing .css file
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+
+> 👉 El problema con aplicar estilos de esta forma, es que son **globales** (este es el comportamiento por default de CSS), por lo tanto no podríamos _scopear_ estilos a un componente determinado, sino que tendríamos un _namespace global_, complejizando así la reusabilidad de los estilos.
 
 ### Inline CSS
 
