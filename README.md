@@ -3,7 +3,7 @@
 
 > 👉 Si te resultó útil, **se agradece que lo compartas para que le llegue a más gente!**
 
-# React: Conceptos Básicos
+![React: Conceptos Básicos](https://i.imgur.com/O1pbl51.png)
 
 ## Notas sobre React
 
