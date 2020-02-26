@@ -44,7 +44,7 @@ Los [componentes](https://github.com/undefinedschool/notes-react-basics#react-co
 
 Podríamos decir que funcionan de forma similar a los _atributos HTML_, sólo que, en este caso, escribimos JSX en lugar de HTML y las _props_ puede ser cualquier expresión válida en JS. Estos valores (_props_) podrán ser luego utilizados por el componente o pasados a un _child component_.
 
-> 👉 **Las _props_ son inmutables y siempre se pasan de componentes superiores a componentes inferiores<sup>1</sup>**, dicho de otra forma, desde un componente padre (_parent component_) hacia un componente hijo (_child component_).
+> 👉 **Las _props_ son inmutables y siempre se pasan de componentes superiores a componentes inferiores<sup id="cita_ref-1"><a href="#cita_nota-1">[1]</a></sup>**, dicho de otra forma, desde un componente padre (_parent component_) hacia un componente hijo (_child component_).
 
 ### State
 
@@ -309,7 +309,7 @@ La forma que tenemos de modificar el [_state_](https://github.com/undefinedschoo
 
 Volviendo al ejemplo anterior, si queremos, por ejemplo, modificar alguna propiedad del _state_ al hacer click en un botón, podríamos utilizar la propiedad `onClick`, que agrega un _listener_ (para un evento de tipo 'click') en el elemento `<button>` y recibe un [_callback_](https://github.com/undefinedschool/notes-callbacks) como parámetro. Este callback va a ejecutarse cada vez que se clickee el botón.
 
-Combinando lo anterior entonces con el método `setState`<sup>2</sup>, podemos modificar el estado al clickear el botón. `setState` va a invocar luego al método `render` (ya que modificamos el estado), para que el componente se vuelva a renderizar y la UI refleje el cambio de estado correctamente.
+Combinando lo anterior entonces con el método `setState`<sup id="cita_ref-2"><a href="#cita_nota-2">[2]</a></sup>, podemos modificar el estado al clickear el botón. `setState` va a invocar luego al método `render` (ya que modificamos el estado), para que el componente se vuelva a renderizar y la UI refleje el cambio de estado correctamente.
 
 > 👉 **Es importante notar que sólo modificamos el _state_ a través de `setState`** y no hacemos, por ejemplo `this.state.jsFirst = ...`. `setState` modifica el estado y luego llama a `render`, para que los cambios se produzcan siempre de forma _unidireccional_.
 
@@ -343,6 +343,6 @@ return (
 
 ---
 
-<sup>1</sup> Ver [_one-way data flow_](https://github.com/undefinedschool/notes-react-principles#flujo-de-datos-unidireccional-one-way-data-flow).
+<sup id="cita_nota-1"><a href="#cita_ref-1">1</a></sup> Ver [_one-way data flow_](https://github.com/undefinedschool/notes-react-principles#flujo-de-datos-unidireccional-one-way-data-flow).
 
-<sup>2</sup> Tener en cuenta que [`setState` es _asincrónico_](https://medium.com/@wereHamster/beware-react-setstate-is-asynchronous-ce87ef1a9cf3).
+<sup id="cita_nota-2"><a href="#cita_ref-2">2</a></sup> Tener en cuenta que [`setState` es _asincrónico_](https://medium.com/@wereHamster/beware-react-setstate-is-asynchronous-ce87ef1a9cf3).
