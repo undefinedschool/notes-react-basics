@@ -25,6 +25,11 @@
   - [Class o Stateful Components](https://github.com/undefinedschool/notes-react-basics#class-o-stateful-components)
     - [Accediendo al _state_](https://github.com/undefinedschool/notes-react-basics#accediendo-al-state)
     - [Modificando el _state_](https://github.com/undefinedschool/notes-react-basics#modificando-el-state)
+- [Estilos y CSS]()
+  - [Global CSS]()
+  - [Inline CSS]()
+  - [CSS-in-JS]()
+  - [CSS Modules]()
 
 ---
 
@@ -341,8 +346,91 @@ return (
 );
 ```
 
+## Estilos y CSS
+
+Como vimos antes, usando la _prop_ `className`, podemos agregarle clases de CSS a un componente, donde el valor de `className` hará referencia a clases definidas en hojas de estilo CSS externas.
+
+```JSX
+render() {
+  return <span className="menu navigation-menu">Menu</span>;
+}
+```
+
+Generalmente, las clases dependen de las _props_ o el _state_ del componente
+
+```JSX
+render() {
+  let className = 'menu';
+  
+  if (this.props.isActive) {
+    className += ' menu-active';
+  }
+  
+  return <span className={className}>Menu</span>;
+}
+```
+
+> Este tipo de código puede simplificarse usando el paquete [`classnames`](https://www.npmjs.com/package/classnames#usage-with-reactjs)
+
+### Global CSS
+
+Podemos agregar estilos con CSS a nuestro proyecto con simplemente linkear una hoja de estilos en el `index.html` que monta nuestros componentes, como lo haríamos con HTML y CSS normalmente y referirnos a las clases definidas en este CSS a través del atributo `className`.
+
+```html
+<link rel="stylesheet" href="styles.css" />
+```
+
+El problema con aplicar estilos de esta forma, es que son **globales** (este es el comportamiento por default de CSS), por lo tanto no podríamos _scopear_ estilos a un componente determinado, sino que tendríamos un _namespace global_, complejizando así la reusabilidad de los estilos.
+
+### Inline CSS
+
+Al igual que en HTML, React nos permite también aplicar estilos _inline_, utilizando el atributo `style`.<sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+
+Los estilos inline se definen usando objetos de JS en lugar de strings, con propiedades escritas en la versión [_camelCase_](https://en.wikipedia.org/wiki/Camel_case) del nombre de la propiedad CSS. Podemos pasar los estilos directamente o crear un objeto que los contenga y pasarlo como _prop_.
+
+Por ejemplo
+
+```JSX
+const divStyle = {
+  color: 'blue',
+  backgroundImage: 'url(' + imgUrl + ')',
+};
+
+function HelloWorldComponent() {
+  return <div style={divStyle}>Hello World!</div>;
+}
+```
+
+Los estilos inline también nos permiten combinar sintaxis de CSS con [_JSX_](https://github.com/undefinedschool/notes-react-basics#jsx).
+
+En React, el atributo `style` se usa con mayor frecuencia para añadir estilos calculados dinámicamente al momento del renderizado.
+
+### CSS-in-JS
+
+**_CSS-in-JS_ es un término que se utiliza para definir un _patrón_ donde el CSS se escribe usando JavaScript**, en lugar de definirlo en hojas de estilo externas. De esta forma, **podemos definir estilos dentro del _scope_ de un componente**,es decir, dejan de ser globales y pasan a ser locales, **modularizando de esta forma el CSS y haciéndolo reutilizable**.
+
+Para más detalles, ver slides de la charla [React: CSS-in-JS - Christopher "vjeux" Chedeau](https://speakerdeck.com/vjeux/react-css-in-js) y esta [comparación de librerías CSS-in-JS](https://github.com/MicheleBertoli/css-in-js).
+
+> 👉 **Esta funcionalidad no forma parte de React**, sino que es proporcionada por terceros. **React no es opinionado respecto de cómo se definen los estilos**.
+
+[![The Road to Styled Components - Max Stoiber (React Conf 2017)](https://img.youtube.com/vi/jjN2yURa_uM/0.jpg)](https://www.youtube.com/watch?v=jjN2yURa_uM)
+> Ver [The Road to Styled Components - Max Stoiber (React Conf 2017)](https://www.youtube.com/watch?v=jjN2yURa_uM)
+
+### CSS Modules
+
+Un _módulo CSS_ es un archivo CSS donde todos los estilos tienen un _scope_ local por default.
+
+En React, cada component tiene su propio archivo VSS, _scopeado_ a ese componente. Para aplicarle estilos a un componente, sólo tenemos que crear un `.css` que contenga los estilos.
+
+Luego, este CSS es compilado, generando una versión modificada del CSS, con las clases renombradas (para evitar colisiones en el _namespace_) y un objeto JS que el componente recibirá como _prop_, con las clases originales mapeadas a las nuevas. 
+
+![What are CSS Modules?](https://miro.medium.com/max/1786/1*X5zB3tI5_xaNe3QVS2lNjg.png)
+> Ver [_What are CSS Modules? A visual introduction_](https://www.javascriptstuff.com/what-are-css-modules/)
+
 ---
 
 <sup id="cite_note-1"><a href="#cite_ref-1">1</a></sup> Ver [_one-way data flow_](https://github.com/undefinedschool/notes-react-principles#flujo-de-datos-unidireccional-one-way-data-flow).
 
 <sup id="cite_note-2"><a href="#cite_ref-2">2</a></sup> Tener en cuenta que [`setState` es _asincrónico_](https://medium.com/@wereHamster/beware-react-setstate-is-asynchronous-ce87ef1a9cf3).
+
+<sup id="cite_note-3"><a href="#cite_ref-3">3</a></sup> Por cuestiones de [_especificidad_](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) y mantenimiento del código, se recomienda usar _clases_ antes que estilos _inline_
