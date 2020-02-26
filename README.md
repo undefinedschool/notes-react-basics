@@ -215,7 +215,7 @@ render() {
         hi
         there
       */}
-      <p>Hello, React dev!</>
+      <p>Hello, React dev!</p>
     </>
   );
 }
