@@ -433,4 +433,4 @@ Luego, este CSS es compilado, generando una versión modificada del CSS, con las
 
 <sup id="cite_note-2"><a href="#cite_ref-2">2</a></sup> Tener en cuenta que [`setState` es _asincrónico_](https://medium.com/@wereHamster/beware-react-setstate-is-asynchronous-ce87ef1a9cf3).
 
-<sup id="cite_note-3"><a href="#cite_ref-3">3</a></sup> Por cuestiones de [_especificidad_](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) y mantenimiento del código, se recomienda usar _clases_ antes que estilos _inline_
+<sup id="cite_note-3"><a href="#cite_ref-3">3</a></sup> Por cuestiones de [_especificidad_](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) y mantenimiento del código, se recomienda usar _clases_ antes que estilos _inline_.
