@@ -32,6 +32,7 @@
   - [CSS-in-JS](https://github.com/undefinedschool/notes-react-basics#css-in-js)
   - [CSS Modules](https://github.com/undefinedschool/notes-react-basics#css-modules)
 - [React Developer Tools](https://github.com/undefinedschool/notes-react-basics#react-developer-tools)
+- [Create React App]()
 
 ---
 
@@ -481,6 +482,12 @@ Una extensión que nos va a facilitar mucho la vida a la hora de _debuggear_ y e
 > 👉 Descargar [React Developer Tools para Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es)
 
 > 👉 Descargar [React Developer Tools para Firefox](https://addons.mozilla.org/es/firefox/addon/react-devtools/)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
+## Create React App
+
+(WIP)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
