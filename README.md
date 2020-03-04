@@ -45,6 +45,8 @@ Idealmente, [cada componente debería encargarse de una sola cosa](https://en.wi
 
 > 👉 **La UI de nuestra aplicación va a terminar estando definida entonces como un [_árbol de componentes_](https://reactjs.org/docs/thinking-in-react.html#step-1-break-the-ui-into-a-component-hierarchy)**.
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
 ### Props
 
 Los [componentes](https://github.com/undefinedschool/notes-react-basics#react-component) reciben valores a través de diferentes parámetros a los que llamamos _props_ (por propiedades) y retornan el código necesario (usando [_JSX_](https://github.com/undefinedschool/notes-react-basics#jsx)) para renderizar los componentes. 
@@ -52,6 +54,8 @@ Los [componentes](https://github.com/undefinedschool/notes-react-basics#react-co
 Podríamos decir que funcionan de forma similar a los _atributos HTML_, sólo que, en este caso, escribimos JSX en lugar de HTML y las _props_ puede ser cualquier expresión válida en JS. Estos valores (_props_) podrán ser luego utilizados por el componente o pasados a un _child component_.
 
 > 👉 **Las _props_ son inmutables y siempre se pasan de componentes superiores a componentes inferiores<sup id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>**, dicho de otra forma, desde un componente padre (_parent component_) hacia un componente hijo (_child component_).
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
 ### State
 
@@ -74,6 +78,8 @@ constructor() {
 El _state_ se va a utilizar entonces para _interactividad_, es decir, datos que cambian a través del tiempo.
 
 > 👉 Recordermos que **la vista es una función del estado**: cuando el estado cambia, la vista se vuelve a renderizar. Por lo tanto, si queremos que la vista (UI) sea actualice, tenemos que modificar el estado de alguna forma.
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
 ### Props vs State
 
@@ -103,11 +109,15 @@ Entre las diferencias, encontramos
 
 > 👉 Ver más detalles en [_ReactJS: Props vs. State_](https://lucybain.com/blog/2016/react-state-vs-pros/).
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
 ### Debe un componente tener estado?
 
 **El _state_ es totalmente opcional**. Dado que agregarlo agrega complejidad a la aplicación, es preferente utilizar, siempre que sea posible, [componentes sin estado](https://github.com/undefinedschool/notes-react-basics#functional-o-stateless-components).
 
 > 👉 Si un componente necesita hacer uso de cierta información que puede cambiar entre _renders_, información que el componente mismo puede crear y modificar, vamos a utilizar [_componentes con estado_](https://github.com/undefinedschool/notes-react-basics#class-o-stateful-components).
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
 ## JSX
 
@@ -133,6 +143,8 @@ donde `mdnLink` y `jsFirst` son strings que recibimos como [_props_](https://git
 - para los _atributos de clase_, usamos `className` en lugar de `class`, ya que `class` es una _keyword_ de JS que usamos para construir _clases_ (OOP).
 
 > 👉 Para más detalles, ver [_JSX in Depth_](https://reactjs.org/docs/jsx-in-depth.html).
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
 ### Fragments
 
@@ -163,6 +175,8 @@ render() {
   );
 }
 ```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
 ### Comentarios
 
@@ -228,6 +242,8 @@ render() {
 }
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
 ## Tipos de componentes
 
 ### Functional o _Stateless Components_
@@ -237,6 +253,8 @@ render() {
 En React, los _Stateless Components_ se definen utilizando funciones.
 
 **Siempre van a renderizar el mismo output dado el mismo input**, es por esto que se los conoce como componentes _funcionales_ o _puros_, ya que vamos a definirlos utilizando [_funciones puras_](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/).
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
 ### Class o _Stateful Components_
 
@@ -274,6 +292,8 @@ class App extends Component {
 }
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
 #### Accediendo al _state_
 
 Para acceder al [_state_](https://github.com/undefinedschool/notes-react-basics#state) desde una clase, llamamos a `[super](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)` desde el constructor. Recordemos que `App` extiende `Component`, por lo que al hacer esto, estamos llamando al constructor de `Component`.
@@ -309,6 +329,8 @@ class App extends Component {
   }
 }
 ```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
 #### Modificando el _state_
 
@@ -348,6 +370,8 @@ return (
 );
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
 ## Estilos y CSS
 
 Como vimos antes, usando la _prop_ `className`, podemos agregarle clases de CSS a un componente, donde el valor de `className` hará referencia a clases definidas en hojas de estilo CSS externas.
@@ -374,6 +398,8 @@ render() {
 
 > Este tipo de código puede simplificarse usando el paquete [`classnames`](https://www.npmjs.com/package/classnames#usage-with-reactjs)
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
 ### Global CSS
 
 Podemos agregar estilos con CSS a nuestro proyecto con simplemente linkear una hoja de estilos en el `index.html` que monta nuestros componentes, como lo haríamos con HTML y CSS normalmente y referirnos a las clases definidas en este CSS a través del atributo `className`.
@@ -394,6 +420,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 > 👉 El problema con aplicar estilos de esta forma, es que son **globales** (este es el comportamiento por default de CSS), por lo tanto no podríamos _scopear_ estilos a un componente determinado, sino que tendríamos un _namespace global_, complejizando así la reusabilidad de los estilos.
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
 ### Inline CSS
 
@@ -418,6 +446,8 @@ Los estilos inline también nos permiten combinar sintaxis de CSS con [_JSX_](ht
 
 En React, el atributo `style` se usa con mayor frecuencia para añadir estilos calculados dinámicamente al momento del renderizado.
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
 ### CSS-in-JS
 
 **_CSS-in-JS_ es un término que se utiliza para definir un _patrón_ donde el CSS se escribe usando JavaScript**, en lugar de definirlo en hojas de estilo externas. De esta forma, **podemos definir estilos dentro del _scope_ de un componente**,es decir, dejan de ser globales y pasan a ser locales, **modularizando de esta forma el CSS y haciéndolo reutilizable**.
@@ -428,6 +458,8 @@ Para más detalles, ver slides de la charla [React: CSS-in-JS - Christopher "vje
 
 [![The Road to Styled Components - Max Stoiber (React Conf 2017)](https://img.youtube.com/vi/jjN2yURa_uM/0.jpg)](https://www.youtube.com/watch?v=jjN2yURa_uM)
 > Ver [The Road to Styled Components - Max Stoiber (React Conf 2017)](https://www.youtube.com/watch?v=jjN2yURa_uM)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
 ### CSS Modules
 
@@ -440,6 +472,8 @@ Luego, este CSS es compilado, generando una versión modificada del CSS, con las
 ![What are CSS Modules?](https://miro.medium.com/max/1786/1*X5zB3tI5_xaNe3QVS2lNjg.png)
 > Ver [_What are CSS Modules? A visual introduction_](https://www.javascriptstuff.com/what-are-css-modules/)
 
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
 ## React Developer Tools
 
 Una extensión que nos va a facilitar mucho la vida a la hora de _debuggear_ y entender nuestras aplicaciones React, son las _Developer Tools_, que nos permiten inspeccionar los componentes como si de elementos HTML se tratase.
@@ -447,6 +481,8 @@ Una extensión que nos va a facilitar mucho la vida a la hora de _debuggear_ y e
 > 👉 Descargar [React Developer Tools para Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es)
 
 > 👉 Descargar [React Developer Tools para Firefox](https://addons.mozilla.org/es/firefox/addon/react-devtools/)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
 ---
 
