@@ -10,6 +10,7 @@
 ### `react`
 
 - [**Principios**](https://github.com/undefinedschool/notes-react-principles/)
+- [**Redux**](https://github.com/undefinedschool/notes-redux)
 
 ## Contenido
 
