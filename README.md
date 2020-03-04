@@ -31,6 +31,7 @@
   - [Inline CSS](https://github.com/undefinedschool/notes-react-basics#inline-css)
   - [CSS-in-JS](https://github.com/undefinedschool/notes-react-basics#css-in-js)
   - [CSS Modules](https://github.com/undefinedschool/notes-react-basics#css-modules)
+- [React Developer Tools](https://github.com/undefinedschool/notes-react-basics#react-developer-tools)
 
 ---
 
@@ -438,6 +439,14 @@ Luego, este CSS es compilado, generando una versión modificada del CSS, con las
 
 ![What are CSS Modules?](https://miro.medium.com/max/1786/1*X5zB3tI5_xaNe3QVS2lNjg.png)
 > Ver [_What are CSS Modules? A visual introduction_](https://www.javascriptstuff.com/what-are-css-modules/)
+
+## React Developer Tools
+
+Una extensión que nos va a facilitar mucho la vida a la hora de _debuggear_ y entender nuestras aplicaciones React, son las _Developer Tools_, que nos permiten inspeccionar los componentes como si de elementos HTML se tratase.
+
+> 👉 Descargar [React Developer Tools para Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es)
+
+> 👉 Descargar [React Developer Tools para Firefox](https://addons.mozilla.org/es/firefox/addon/react-devtools/)
 
 ---
 
