@@ -32,6 +32,10 @@
   - [Inline CSS](https://github.com/undefinedschool/notes-react-basics#inline-css)
   - [CSS-in-JS](https://github.com/undefinedschool/notes-react-basics#css-in-js)
   - [CSS Modules](https://github.com/undefinedschool/notes-react-basics#css-modules)
+- [React Router](https://github.com/undefinedschool/notes-react-basics#react-router)
+- [Context API](https://github.com/undefinedschool/notes-react-basics#context-api)
+- [React Hooks](https://github.com/undefinedschool/notes-react-basics#react-hooks)
+- [Testing](https://github.com/undefinedschool/notes-react-basics#testing)
 - [React Developer Tools](https://github.com/undefinedschool/notes-react-basics#react-developer-tools)
 - [Create React App]()
 
@@ -473,6 +477,38 @@ Luego, este CSS es compilado, generando una versión modificada del CSS, con las
 
 ![What are CSS Modules?](https://miro.medium.com/max/1786/1*X5zB3tI5_xaNe3QVS2lNjg.png)
 > Ver [_What are CSS Modules? A visual introduction_](https://www.javascriptstuff.com/what-are-css-modules/)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
+## React Router
+
+[notas aparte]
+
+(WIP)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
+## Context API
+
+[notas aparte]
+
+(WIP)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
+## React Hooks
+
+[notas aparte]
+
+(WIP)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
+## Testing
+
+[notas aparte]
+
+(WIP)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
