@@ -57,7 +57,7 @@ Idealmente, [cada componente debería encargarse de una sola cosa](https://en.wi
 
 Los [componentes](https://github.com/undefinedschool/notes-react-basics#react-component) reciben valores a través de diferentes parámetros a los que llamamos _props_ (por propiedades) y retornan el código necesario (usando [_JSX_](https://github.com/undefinedschool/notes-react-basics#jsx)) para renderizar los componentes. 
 
-Podríamos decir que funcionan de forma similar a los _atributos HTML_, sólo que, en este caso, escribimos JSX en lugar de HTML y las _props_ puede ser cualquier expresión válida en JS. Estos valores (_props_) podrán ser luego utilizados por el componente o pasados a un _child component_.
+Podríamos decir que funcionan de forma similar a los _atributos HTML_, sólo que, en este caso, escribimos JSX en lugar de HTML y las _props_ pueden ser cualquier expresión válida en JS. Estos valores (_props_) podrán ser luego utilizados por el componente o pasados a un _child component_.
 
 > 👉 **Las _props_ son inmutables y siempre se pasan de componentes superiores a componentes inferiores<sup id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>**, dicho de otra forma, desde un componente padre (_parent component_) hacia un componente hijo (_child component_).
 
