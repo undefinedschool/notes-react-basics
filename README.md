@@ -67,7 +67,7 @@ Podríamos decir que funcionan de forma similar a los _atributos HTML_, sólo qu
 
 Un [componente](https://github.com/undefinedschool/notes-react-basics#react-component) puede simplemente recibir [_props_](https://github.com/undefinedschool/notes-react-basics#props) y renderizarse. 
 
-Por otro lado, los componentes también poseen un _state_, un objeto de JavaScript que se utiliza para almacenar información (características propias) acerca del componente y que puede cambiar a lo largo del tiempo. Estos cambios suelen ser resultado de diferentes eventos producidos por los usuarios (input en un formulario, click sobre un elemento, etc) o el sistema (obtener el resultado de hacer un request a una API, etc).
+Por otro lado, **los componentes también pueden poseer un _state_, un objeto de JavaScript que se utiliza para almacenar información (características propias) acerca del componente y que puede cambiar a lo largo del tiempo**. Estos cambios suelen ser resultado de diferentes eventos producidos por los usuarios (input en un formulario, click sobre un elemento, etc) o el sistema (obtener el resultado de hacer un request a una API, etc).
 
 El _state_ se crea dentro del componente, usando el constructor, para setear su valor inicial (el cual también puede obtenerse a partir de las _props_ que reciba el componente).
 
