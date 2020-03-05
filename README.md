@@ -35,6 +35,7 @@
 - [React Router](https://github.com/undefinedschool/notes-react-basics#react-router)
 - [Context API](https://github.com/undefinedschool/notes-react-basics#context-api)
 - [React Hooks](https://github.com/undefinedschool/notes-react-basics#react-hooks)
+- [Higher Order Components](https://github.com/undefinedschool/notes-react-basics#higher-order-components)
 - [Testing](https://github.com/undefinedschool/notes-react-basics#testing)
 - [React Developer Tools](https://github.com/undefinedschool/notes-react-basics#react-developer-tools)
 - [Create React App]()
@@ -492,7 +493,7 @@ Luego, este CSS es compilado, generando una versión modificada del CSS, con las
 
 ## Context API
 
-[notas aparte]
+[notas aparte, conceptos avanzados]
 
 (WIP)
 
@@ -506,9 +507,17 @@ Luego, este CSS es compilado, generando una versión modificada del CSS, con las
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
+## Higher Order Components
+
+[notas aparte, conceptos avanzados]
+
+(WIP)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
 ## Testing
 
-[notas aparte]
+[notas aparte, conceptos avanzados]
 
 (WIP)
 
