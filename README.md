@@ -91,9 +91,9 @@ El _state_ se va a utilizar entonces para _interactividad_, es decir, datos que 
 
 Tanto las _props_ como el _state_ tienen características comunes:
 
-- son objetos de JS
-- ambos contienen información que influye en el resultado del _render_
-- pueden tener valores por default
+- son objetos de JS.
+- ambos contienen información que influye en el resultado del _render_.
+- pueden tener valores por default.
 - pueden ser accedidos mediante `this.props` o `this.state`, pero estas propiedades son de _sólo lectura_. Tenemos que utilizar métodos como `setState` para modificarlos.
 
 Entre las diferencias, encontramos
