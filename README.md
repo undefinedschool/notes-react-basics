@@ -27,6 +27,7 @@
 - [React Hooks](https://github.com/undefinedschool/notes-react-basics#react-hooks)
 - [Higher Order Components](https://github.com/undefinedschool/notes-react-basics#higher-order-components)
 - [Testing](https://github.com/undefinedschool/notes-react-basics#testing)
+  - [PropTypes](https://github.com/undefinedschool/notes-react-basics#proptypes)
 - [React Developer Tools](https://github.com/undefinedschool/notes-react-basics#react-developer-tools)
 - [Create React App]()
 
@@ -510,6 +511,28 @@ Luego, este CSS es compilado, generando una versión modificada del CSS, con las
 [notas aparte, conceptos avanzados]
 
 (WIP)
+
+### PropTypes
+
+Podemos utilizar [*PropTypes*](https://reactjs.org/docs/typechecking-with-proptypes.html) para verificar tipos de las props de cada componente, asi como las que son requeridas.
+
+> 👉 Tener en cuenta que **los *PropTypes* sólo se chequean en *runtime* (tiempo de ejecución de la app) y en modo desarrollo**, por cuestiones de performance.
+
+```js
+import PropTypes from 'prop-types';
+
+class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hello, {this.props.name}</h1>
+    );
+  }
+}
+
+Greeting.propTypes = {
+  name: PropTypes.string
+};
+```
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
