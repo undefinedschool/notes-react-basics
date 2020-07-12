@@ -514,7 +514,7 @@ Luego, este CSS es compilado, generando una versión modificada del CSS, con las
 
 ### PropTypes
 
-Podemos utilizar [*PropTypes*](https://reactjs.org/docs/typechecking-with-proptypes.html) para verificar tipos de las props de cada componente, asi como las que son requeridas.
+Podemos utilizar [*PropTypes*](https://reactjs.org/docs/typechecking-with-proptypes.html) para verificar tipos de las props de cada componente y chequear que estén siendo utilizados con los valores correspondientes, asi como validar que esté recibiendo las props requeridas.
 
 > 👉 Tener en cuenta que **los *PropTypes* sólo se chequean en *runtime* (tiempo de ejecución de la app) y en modo desarrollo**, por cuestiones de performance.
 
