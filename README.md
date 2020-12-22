@@ -374,6 +374,8 @@ return (
 
 ## Estilos y CSS
 
+React no es opinionado sobre cómo aplicar estilos a los componentes, de hecho, funciona perfectamente con archivos de CSS plano. Recordemos que React se ocupa sólo de la _vista_ de la aplicación, es decir, renderizar elementos del DOM en el sitio. Estos elementos pueden tener clases de CSS y el browser se encargará de aplicar los estilos correspondientes.
+
 Como vimos antes, usando la _prop_ `className`, podemos agregarle clases de CSS a un componente, donde el valor de `className` hará referencia a clases definidas en hojas de estilo CSS externas.
 
 ```JSX
