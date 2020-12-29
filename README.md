@@ -64,8 +64,8 @@ Por otro lado, **los componentes también pueden poseer un _state_, un objeto de
 El _state_ se crea dentro del componente, usando el constructor, para setear su valor inicial (el cual también puede obtenerse a partir de las _props_ que reciba el componente).
 
 ```js
-constructor() {
-  super();
+constructor(props) {
+  super(props);
   
   this.state = {
     count: 0,
