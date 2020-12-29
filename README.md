@@ -252,7 +252,7 @@ render() {
 
 En React, los _Stateless Components_ se definen utilizando funciones.
 
-> Estas funcionen reciben `props` como parámetro
+> Estas funcionen reciben `props` como parámetro y, a diferencia de los _class components_, no utilizan `this` para acceder a las mismas
 
 ```jsx
 function HelloWorld (props) {
