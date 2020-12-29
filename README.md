@@ -88,7 +88,7 @@ Tanto las _props_ como el _state_ tienen características comunes:
 - son objetos de JS.
 - ambos contienen información que influye en el resultado del _render_.
 - pueden tener valores por default.
-- pueden ser accedidos mediante `this.props` o `this.state`, pero estas propiedades son de _sólo lectura_. Tenemos que utilizar el método `setState` para poder modificar el estado.
+- pueden ser accedidos mediante `this.props` o `this.state`, pero estas propiedades son de _sólo lectura_ (tenemos que utilizar el método `setState` para poder modificar el estado).
 
 Entre las diferencias, encontramos
 
