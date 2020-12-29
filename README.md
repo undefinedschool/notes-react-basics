@@ -252,6 +252,14 @@ render() {
 
 En React, los _Stateless Components_ se definen utilizando funciones.
 
+> Estas funcionen reciben `props` como parámetro
+
+```jsx
+function HelloWorld (props) {
+  return <div>Hello {props.name}</div>;
+}
+```
+
 **Siempre van a renderizar el mismo output dado el mismo input**, es por esto que se los conoce como componentes _funcionales_ o _puros_, ya que vamos a definirlos utilizando [_funciones puras_](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/).
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
