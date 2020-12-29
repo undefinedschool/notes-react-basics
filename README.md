@@ -578,6 +578,7 @@ En React existen las [*PropTypes*](https://reactjs.org/docs/typechecking-with-pr
 > 👉 Tener en cuenta que **los *PropTypes* sólo se chequean en *runtime* (tiempo de ejecución de la app) y en modo desarrollo**, por cuestiones de performance.
 
 ```js
+import React from 'react'
 import PropTypes from 'prop-types';
 
 class Greeting extends React.Component {
@@ -590,6 +591,31 @@ class Greeting extends React.Component {
 
 Greeting.propTypes = {
   name: PropTypes.string
+};
+```
+
+Aparte de validar el tipo de una prop, podemos definir por ejemplo, si es requerida, agregando `isRequired` al final
+
+```js
+import React from 'react'
+import PropTypes from 'prop-types'
+
+export default function Hello ({ name }) {
+  return <h1>Hello, {name}</h1>
+}
+
+Hello.propTypes = {
+  name: PropTypes.string.isRequired
+}
+```
+
+También podemos _componer_ propTypes, por ejemplo si tenemos un array de string, utilizando `PropTypes.arrayOf(PropTypes.string)`
+
+```js
+Component.propTypes = {
+  languages: PropTypes.arrayOf(PropTypes.string).isRequired,
+  selected: PropTypes.string.isRequired,
+  onUpdateSelected: PropTypes.func.isRequired
 };
 ```
 
