@@ -248,7 +248,7 @@ render() {
 
 ### Functional o _Stateless Components_
 
-> 👉 **Sólo tienen props, (no _state_)**. Toda la lógica de este tipo de componentes depende de las _props_ que reciben, por lo tanto, son mucho más simples de entender (y testear).
+> 👉 **Sólo tienen props, (no _state_)**. Toda la lógica de este tipo de componentes depende únicamente de las _props_ que reciben, por lo tanto, son mucho más simples de entender (y testear).
 
 En React, los _Stateless Components_ se definen utilizando funciones.
 
