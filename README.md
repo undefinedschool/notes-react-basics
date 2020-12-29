@@ -575,6 +575,8 @@ Una gran cantidad de bugs puede prevenirse si validamos los diferentes tipos de 
 
 En React existen las [*PropTypes*](https://reactjs.org/docs/typechecking-with-proptypes.html) para verificar tipos de las props de cada componente y chequear que estén siendo utilizados con los valores correspondientes, asi como validar que esté recibiendo las props requeridas.
 
+**Las propTypes también sirven de documentación, ya que nos permiten saber rápidamente qué tipo de props espera un componente**.
+
 > 👉 Tener en cuenta que **los *PropTypes* sólo se chequean en *runtime* (tiempo de ejecución de la app) y en modo desarrollo**, por cuestiones de performance.
 
 ```js
