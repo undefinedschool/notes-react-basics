@@ -348,6 +348,22 @@ Combinando lo anterior entonces con el método `setState`<sup id="cite_ref-2"><a
 En este caso, sólo estamos modificando la propiedad `jsFirst` del _state_ y dejando el resto igual que antes.
 
 ```JSX
+constructor(props) {
+  super(props);
+
+  this.state = {
+    learnFirst: 'JS'
+  }
+  
+  this.udpateLearning = this.updateLearning.bind(this);
+}
+
+updateLearning() {
+  this.setState(prevState => ({
+    learnFirst: prevState.learnFirst === 'JS' ? 'React' : 'JS'
+  }));
+}
+
 return (
   <div className='App'>
     <header className='App-header'>
@@ -356,15 +372,10 @@ return (
         Edit <code>src/App.js</code> and save to reload.
       </p>
       <a className='App-link' href={mdnLink} target='_blank' rel='noopener noreferrer'>
-        Learn {jsFirst}
+        Learn {this.state.learnFirst}
       </a>
       <button
-        onClick={() =>
-          this.setState({
-            ...this.state,
-            jsFirst: 'React'
-          })
-        }
+        onClick={() => this.updateLearning()}
       >
         Change text
       </button>
