@@ -349,7 +349,33 @@ La forma que tenemos de modificar el [_state_](https://github.com/undefinedschoo
 > 👉 Por qué utilizamos este método y no podemos reasignar el valor directamente? (`this.state = ...`)  
 > **Esto no funcionaría**. Recordemos que en React, _la vista es una función del estado_. No tenemos que preocuparnos por actualizar el DOM, ya que React lo hará por nosotros cada vez que el estado cambie. Si modificáramos el estado directamente, React no tendría forma de saber que el estado fue modificado y por lo tanto, no podría actualizar la UI.
 
-Volviendo al ejemplo anterior, si queremos, por ejemplo, modificar alguna propiedad del _state_ al hacer click en un botón, podríamos utilizar la propiedad `onClick`, que agrega un _listener_ (para un evento de tipo 'click') en el elemento `<button>` y recibe un [_callback_](https://github.com/undefinedschool/notes-callbacks) como parámetro. Este callback va a ejecutarse cada vez que se clickee el botón.
+**Dependiendo de si el nuevo estado depende o no del estado previo**, `setState` nos provee de 2 formas de actualizar el mismo. 
+
+En la primera, `setState` recibe un objeto que representa el nuevo estado y se va a _mergear_ con el estado actual.
+
+```js
+// 1: sin estado previo, `setState` recibe un objeto
+updateLearning() {
+  this.setState({
+    learnFirst: 'JS'
+  });
+}
+```
+
+En la segunda forma, si el nuevo estado depende del anterior, vamos a pasarle un _callback_ a `setState`, que va a recibir como parámetro el valor actual del estado (en el ejemplo debajo es el parámetro `setState`) y retornar un objeto que representa al nuevo estado y se va a mergear con el anterior.
+
+```js
+// 2: con estado previo, `setState` recibe un callback
+updateLearning() {
+  this.setState(prevState => ({
+    learnFirst: prevState.learnFirst === 'JS' ? 'React' : 'JS'
+  }));
+}
+```
+
+> La elección sobre cuál forma usar va a depender de si necesitamos o no el valor del estado previo
+
+Volviendo al ejemplo visto anteriormente, si queremos, por ejemplo, modificar alguna propiedad del _state_ al hacer click en un botón, podríamos utilizar la propiedad `onClick`, que agrega un _listener_ (para un evento de tipo 'click') en el elemento `<button>` y recibe un [_callback_](https://github.com/undefinedschool/notes-callbacks) como parámetro. Este callback va a ejecutarse cada vez que se clickee el botón.
 
 Combinando lo anterior entonces con el método `setState`<sup id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>, podemos modificar el estado al clickear el botón. `setState` va a invocar luego al método `render` (ya que modificamos el estado), para que el componente se vuelva a renderizar y la UI refleje el cambio de estado correctamente.
 
@@ -363,7 +389,12 @@ constructor(props) {
     learnFirst: 'JS'
   }
   
-  this.udpateLearning = this.updateLearning.bind(this);
+  /*
+    ⚠️ es importante bindear siempre los métodos que modifiquen el estado, 
+    para no perder la referencia al componente original, sobre todo si pasamos el
+    método como prop a un child component
+  */
+  this.updateLearning = this.updateLearning.bind(this);
 }
 
 updateLearning() {
