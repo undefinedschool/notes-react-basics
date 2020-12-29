@@ -594,6 +594,10 @@ Greeting.propTypes = {
 };
 ```
 
+A continuación se mencionan algunas propTypes bastante útiles
+
+#### `isRequired`
+
 Aparte de validar el tipo de una prop, podemos definir por ejemplo, si es requerida, agregando `isRequired` al final
 
 ```js
@@ -609,6 +613,8 @@ Hello.propTypes = {
 }
 ```
 
+#### propTypes compuestas
+
 También podemos _componer_ propTypes, por ejemplo si tenemos un array de string, utilizando `PropTypes.arrayOf(PropTypes.string)`
 
 ```js
@@ -617,6 +623,56 @@ Component.propTypes = {
   selected: PropTypes.string.isRequired,
   onUpdateSelected: PropTypes.func.isRequired
 };
+```
+
+#### `PropTypes.exact`
+
+La prop que recibe el componente debe ser un objeto con una forma específica (exacta), cualquier propiedad extra genera error. En el caso de que querramos darle cierta flexibilidad y permitir propiedades extra, podemos utilizar `PropTypes.shape`.
+
+```js
+Header.propTypes = {
+  user: PropTypes.exact({
+    name: PropTypes.string,
+    age: PropTypes.number,
+    submit: PropTypes.func,
+  })
+}
+
+<Header
+  user={{
+    name: 'Jesse',
+    age: 28,
+    submit: () => ({})
+  }}
+/>
+```
+
+#### `PropTypes.oneOf`
+
+La prop que recibe el componente debe tener como valor alguno de los especificados.
+
+```js
+List.propTypes = {
+  order: PropTypes.oneOf(['ascending', 'descending'])
+  items: PropTypes.array,
+}
+
+<List items={users} order='ascending' />
+```
+
+#### `PropTypes.oneOfType`
+
+La prop que recibe el componente debe ser de alguno de los tipos especificados.
+
+```js
+Post.propTypes = {
+  date: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.instanceOf(Date)
+  ])
+}
+
+<Post date={new Date()} />
 ```
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
