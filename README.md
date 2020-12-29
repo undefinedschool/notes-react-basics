@@ -338,11 +338,12 @@ class App extends Component {
 
 La forma que tenemos de modificar el [_state_](https://github.com/undefinedschool/notes-react-basics#state) en un [_Class Component_](https://github.com/undefinedschool/notes-react-basics/#class-o-stateful-components) es a través del método `setState` (que proviene de `Component`).
 
+> 👉 Por qué utilizamos este método y no podemos reasignar el valor directamente? (`this.state = ...`)  
+> **Esto no funcionaría**. Recordemos que en React, _la vista es una función del estado_. No tenemos que preocuparnos por actualizar el DOM, ya que React lo hará por nosotros cada vez que el estado cambie. Si modificáramos el estado directamente, React no tendría forma de saber que el estado fue modificado y por lo tanto, no podría actualizar la UI.
+
 Volviendo al ejemplo anterior, si queremos, por ejemplo, modificar alguna propiedad del _state_ al hacer click en un botón, podríamos utilizar la propiedad `onClick`, que agrega un _listener_ (para un evento de tipo 'click') en el elemento `<button>` y recibe un [_callback_](https://github.com/undefinedschool/notes-callbacks) como parámetro. Este callback va a ejecutarse cada vez que se clickee el botón.
 
 Combinando lo anterior entonces con el método `setState`<sup id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>, podemos modificar el estado al clickear el botón. `setState` va a invocar luego al método `render` (ya que modificamos el estado), para que el componente se vuelva a renderizar y la UI refleje el cambio de estado correctamente.
-
-> 👉 **Es importante notar que sólo modificamos el _state_ a través de `setState`** y no hacemos, por ejemplo `this.state.jsFirst = ...`. `setState` modifica el estado y luego llama a `render`, para que los cambios se produzcan siempre de forma _unidireccional_.
 
 En este caso, sólo estamos modificando la propiedad `jsFirst` del _state_ y dejando el resto igual que antes.
 
