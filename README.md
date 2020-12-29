@@ -296,14 +296,14 @@ class App extends Component {
 
 #### Accediendo al _state_
 
-Para acceder al [_state_](https://github.com/undefinedschool/notes-react-basics#state) desde una clase, llamamos a `[super](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)` desde el constructor. Recordemos que `App` extiende `Component`, por lo que al hacer esto, estamos llamando al constructor de `Component`.
+Para acceder al [_state_](https://github.com/undefinedschool/notes-react-basics#state) desde una clase, llamamos a [`super`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super) desde el constructor. Recordemos que `App` extiende `Component` (ó `React.Component`, dependiendo de cómo lo importemos), por lo que al hacer esto, estamos llamando al constructor de `Component`.
 
 Ahora tenemos acceso a la propiedad `state` y podemos modificar este objeto, setearle valores, etc.
 
 ```JSX
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       jsFirst: 'JavaScript',
