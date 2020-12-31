@@ -547,11 +547,7 @@ Luego, este CSS es compilado, generando una versión modificada del CSS, con las
 
 ## React Hooks
 
-[mover a notas aparte]
-
-- Sólo podemos usar_Hooks_ dentro de _function components_ (es decir, no dentro de clases)
-
-(WIP)
+Ver [notas sobre React Hooks](https://github.com/undefinedschool/notes-react-hooks/).
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
