@@ -22,16 +22,9 @@
   - [Inline CSS](https://github.com/undefinedschool/notes-react-basics#inline-css)
   - [CSS-in-JS](https://github.com/undefinedschool/notes-react-basics#css-in-js)
   - [CSS Modules](https://github.com/undefinedschool/notes-react-basics#css-modules)
-- [React Router](https://github.com/undefinedschool/notes-react-basics#react-router)
-- [Context API](https://github.com/undefinedschool/notes-react-basics#context-api)
-
-- [Higher Order Components](https://github.com/undefinedschool/notes-react-basics#higher-order-components)
-- [React Hooks](https://github.com/undefinedschool/notes-react-basics#react-hooks)
-- [Testing](https://github.com/undefinedschool/notes-react-basics#testing)
-
-  - [PropTypes](https://github.com/undefinedschool/notes-react-basics#proptypes)
+- [PropTypes](https://github.com/undefinedschool/notes-react-basics#proptypes)
 - [React Developer Tools](https://github.com/undefinedschool/notes-react-basics#react-developer-tools)
-- [Create React App]()
+- [Create React App](https://github.com/undefinedschool/notes-react-basics#create-react-app)
 
 ---
 
