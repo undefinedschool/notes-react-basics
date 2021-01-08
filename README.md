@@ -22,6 +22,8 @@
   - [Inline CSS](https://github.com/undefinedschool/notes-react-basics#inline-css)
   - [CSS-in-JS](https://github.com/undefinedschool/notes-react-basics#css-in-js)
   - [CSS Modules](https://github.com/undefinedschool/notes-react-basics#css-modules)
+- [React Component Lifecycle](https://github.com/undefinedschool/notes-react-basics/#react-component-lifecycle)
+- [React Hooks](https://github.com/undefinedschool/notes-react-basics/#react-hooks)
 - [PropTypes](https://github.com/undefinedschool/notes-react-basics#proptypes)
 - [React Developer Tools](https://github.com/undefinedschool/notes-react-basics#react-developer-tools)
 - [Create React App](https://github.com/undefinedschool/notes-react-basics#create-react-app)
@@ -524,13 +526,19 @@ Luego, este CSS es compilado, generando una versión modificada del CSS, con las
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
+## React Component Lifecycle
+
+Ver [notas sobre React Component Lifecycle](https://github.com/undefinedschool/notes-react-component-lifecycle).
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
 ## React Hooks
 
 Ver [notas sobre React Hooks](https://github.com/undefinedschool/notes-react-hooks/).
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
-### PropTypes
+## PropTypes
 
 Una gran cantidad de bugs puede prevenirse si validamos los diferentes tipos de datos que utilizamos y pasamos como parámetros (_props_) en nuestra aplicación.
 
