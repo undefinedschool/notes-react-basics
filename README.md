@@ -1,4 +1,4 @@
-# ![React: Conceptos Básicos](https://i.imgur.com/O1pbl51.png)
+# React: Conceptos Básicos
 
 ### 👉 Ver [todas las notas](https://github.com/undefinedschool/notes)
 
@@ -24,9 +24,11 @@
   - [CSS Modules](https://github.com/undefinedschool/notes-react-basics#css-modules)
 - [React Router](https://github.com/undefinedschool/notes-react-basics#react-router)
 - [Context API](https://github.com/undefinedschool/notes-react-basics#context-api)
-- [React Hooks](https://github.com/undefinedschool/notes-react-basics#react-hooks)
+
 - [Higher Order Components](https://github.com/undefinedschool/notes-react-basics#higher-order-components)
+- [React Hooks](https://github.com/undefinedschool/notes-react-basics#react-hooks)
 - [Testing](https://github.com/undefinedschool/notes-react-basics#testing)
+
   - [PropTypes](https://github.com/undefinedschool/notes-react-basics#proptypes)
 - [React Developer Tools](https://github.com/undefinedschool/notes-react-basics#react-developer-tools)
 - [Create React App]()
@@ -529,41 +531,11 @@ Luego, este CSS es compilado, generando una versión modificada del CSS, con las
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
-## React Router
-
-[notas aparte]
-
-(WIP)
-
-[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
-
-## Context API
-
-[notas aparte, conceptos avanzados]
-
-(WIP)
-
-[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
-
 ## React Hooks
 
 Ver [notas sobre React Hooks](https://github.com/undefinedschool/notes-react-hooks/).
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
-
-## Higher Order Components
-
-[notas aparte, conceptos avanzados]
-
-(WIP)
-
-[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
-
-## Testing
-
-[notas aparte, conceptos avanzados]
-
-(WIP)
 
 ### PropTypes
 
