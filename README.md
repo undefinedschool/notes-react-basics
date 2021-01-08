@@ -95,7 +95,7 @@ Entre las diferencias, encontramos
 **Props:**
 
 - se pasan a un componente, [siempre de arriba hacia abajo](https://github.com/undefinedschool/notes-react-principles#flujo-de-datos-unidireccional-one-way-data-flow).
-- son _valores de configuración_. Podemos pensar en ellos como si se tratase de los argumentos que recibe una función.
+- son _valores de configuración_. Podemos pensar en ellos como si se tratase de los argumentos que recibe una función o los atributos de un elemento HTML.
 - son _inmutables_, no podemos modificar el valor de una _prop_ desde el componente que la recibe.
 
 **State:**
