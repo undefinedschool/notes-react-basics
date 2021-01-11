@@ -4,6 +4,7 @@
 
 ## Contenido
 
+- [React Element](https://github.com/undefinedschool/notes-react-basics#react-element)
 - [React Component](https://github.com/undefinedschool/notes-react-basics#react-component)
   - [Props](https://github.com/undefinedschool/notes-react-basics#props)
   - [State](https://github.com/undefinedschool/notes-react-basics#state)
@@ -29,9 +30,34 @@
 
 ---
 
+## React Element
+
+Es una representación liviana, a través de un objeto plano de JS, de un nodo real del DOM. Utilizar estos objetos, más livianos que un nodo real, son los que le permiten a React crear lo que se conoce como [_virtual DOM_](https://github.com/undefinedschool/notes-react-principles#virtual-dom), resultando más eficiente y minimizando la cantidad de operaciones en el DOM real.
+
+React luego va a utilizar esta descripción para crear un nodo real en el DOM y actualizarlo cuando corresponda, con los atributos que necesite.
+
+```js
+const element = React.createElement(
+  'div',
+  { id: 'login-btn' },
+  'Login'
+)
+
+// el código de arriba retorna esta representación de un nodo del DOM
+{
+  type: 'div',
+  props: {
+    children: 'Login',
+    id: 'login-btn'
+  }
+}
+```
+
+[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
+
 ## React Component
 
-**Un componente es un bloque de código reutilizable e independiente**, una pieza de UI con contenido, estilos y comportamiento definidos.
+**Un componente es un bloque de código reutilizable e independiente**, una pieza de UI con contenido, estilos y comportamiento definidos. También podemos definirlo como una función o clase, que, opcionalmente acepta algún input y retorna un **React Element**.
 
 En React, cada parte de la UI es un componente y cada componente tiene un [estado](https://github.com/undefinedschool/notes-react-basics#state).
 
