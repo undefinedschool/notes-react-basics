@@ -10,7 +10,6 @@
   - [Props vs State](https://github.com/undefinedschool/notes-react-basics#props-vs-state)
   - [Debe un componente tener estado?](https://github.com/undefinedschool/notes-react-basics#debe-un-componente-tener-estado)
 - [JSX](https://github.com/undefinedschool/notes-react-basics#jsx)
-  - [Fragments](https://github.com/undefinedschool/notes-react-basics#fragments)
   - [Comentarios](https://github.com/undefinedschool/notes-react-basics#comentarios)
 - [Tipos de componentes](https://github.com/undefinedschool/notes-react-basics#tipos-de-componentes)
   - [Functional o Stateless Components](https://github.com/undefinedschool/notes-react-basics#functional-o-stateless-components)
@@ -140,38 +139,6 @@ donde `mdnLink` y `jsFirst` son strings que recibimos como [_props_](https://git
 - para los _atributos de clase_, usamos `className` en lugar de `class`, ya que `class` es una _keyword_ de JS que usamos para construir _clases_ (OOP).
 
 > 👉 Para más detalles, ver [_JSX in Depth_](https://reactjs.org/docs/jsx-in-depth.html).
-
-[↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
-
-### Fragments
-
-Si necesitamos devolver múltiples elementos, sin agregar innecesariamente nodos extra al DOM (como un `div` que haga de _contenedor_), podemos utilizar [_React Fragments_](https://reactjs.org/docs/fragments.html) para agrupar y devolver una lista de nodos.
-
-```JSX
-render() {
-  return (
-    <React.Fragment>
-      <ChildA />
-      <ChildB />
-      <ChildC />
-    </React.Fragment>
-  );
-}
-```
-
-Alternativamente, podemos utilizar una sintaxis abreviada (`<></>`). Tener en cuenta que esta última no soporta _keys_ o atributos.
-
-```JSX
-render() {
-  return (
-    <>
-      <ChildA />
-      <ChildB />
-      <ChildC />
-    </>
-  );
-}
-```
 
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
