@@ -101,6 +101,8 @@ El _state_ se va a utilizar entonces para _interactividad_, es decir, datos que 
 
 **Si necesitamos compartir el _state_ de un componente con otros, lo pasamos por [_props_](https://github.com/undefinedschool/notes-react-basics#props), siempre de arriba hacia abajo, de un _parent_ a un _child component_**. En la práctica, esto implica que el componente raíz (_root_, el que se encuentra arriba de todo en el árbol de componentes) de la aplicación necesita tener acceso a este valor en su [_state_](https://github.com/undefinedschool/notes-react-basics#state).
 
+Resumidamente, podríamos decir que el _state_ sirve para **preservar valores entre renders y triggerear re-renders del componente cuando este se actualiza.**
+
 [↑ Ir al inicio](https://github.com/undefinedschool/notes-react-basics#contenido)
 
 ### Props vs State
